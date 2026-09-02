@@ -1,15 +1,10 @@
 import React from "react";
-import { Methodology } from "./components/methodology.jsx";
-import { Filters } from "./components/filters.jsx";
+import Methodology from "./components/methodology.jsx";
+import Filters from "./components/filters.jsx";
 import "./App.css";
+import allGuildData from "./allguild.json";
 
-// import data
-let allGuildData = "";
-try {
-  allGuildData = require("./allguild.json");
-} catch (err) {
-  allGuildData = null;
-}
+console.log({ allGuildData });
 
 export default function App() {
   return (

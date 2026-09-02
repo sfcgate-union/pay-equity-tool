@@ -2,6 +2,7 @@
 
 :root {
   font-family: "Fira Sans", sans-serif;
+  --max-width: 640px;
 }
 
 .App {
@@ -10,30 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* filters styling */
-.filtersContainer {
-  font-family: "Fira Sans", sans-serif;
-}
-
-.newsroomButtons {
-  display: inline-block;
-  border: none;
-  border-radius: 5px;
-  background-color: C7C7C7;
-  padding: 5px 10px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* unvisited link */
-a:link {
-  color: #26a0a5;
-  text-decoration: underline;
+.header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: left;
 }
 
 /* mouse over link */
@@ -46,11 +27,17 @@ a:visited {
   color: #909090;
 }
 
+/* unvisited link */
+a:link {
+  color: #26a0a5;
+  text-decoration: underline;
+}
+
 .mainHed {
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 500;
-  max-width: 640px;
+  max-width: var(--max-width);
   margin: 1.5rem auto;
   text-align: left;
 }
@@ -81,6 +68,26 @@ body {
   font-style: italic;
 }
 
+/* filters styling */
+.filtersContainer {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.newsroomButtons {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background-color: C7C7C7;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+}
+
 .filtersContainer,
 .methodologyContainer {
   background-color: #f6f6f6;
@@ -89,7 +96,7 @@ body {
   padding: 1rem;
   border-radius: 5px;
   filter: drop-shadow(#e1e1e1 0.5rem 0.5rem 0rem);
-  max-width: 640px;
+  max-width: var(--max-width);
   margin: 1.5rem auto;
 }
 
@@ -99,7 +106,7 @@ body {
 
 .deptResultsContainer {
   padding: 1rem;
-  max-width: 640px;
+  max-width: var(--max-width);
   margin: 1.5rem auto;
 }
 
