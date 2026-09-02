@@ -17,5 +17,5 @@ export function calculateSalaryDifference(int1, int2) {
   } else if (percentDifference >= 0) {
     comparisonDesc = "higher";
   }
-  return [difference, percentDifference, comparisonDesc];
+  return [difference, Math.abs(percentDifference), comparisonDesc];
 }
