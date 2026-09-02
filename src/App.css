@@ -73,7 +73,8 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
-.newsroomButtons {
+.newsButton {
+  font-family: "Fira Sans", sans-serif;
   display: inline-block;
   border: none;
   border-radius: 5px;
@@ -161,6 +162,7 @@ body {
 }
 
 .deptDropdown {
+  font-family: "Fira Sans", sans-serif;
   width: 100%;
   appearance: none;
   /* display: block; */
