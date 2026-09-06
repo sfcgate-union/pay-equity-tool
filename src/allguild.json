@@ -761,15 +761,6 @@
   {
     "guild": "sfc",
     "teams": "designers",
-    "gender": "all",
-    "ethnicity": "all",
-    "age": "all",
-    "medianWeek": 1766,
-    "medianAnnual": 91828
-  },
-  {
-    "guild": "sfc",
-    "teams": "designers",
     "gender": "men",
     "ethnicity": "all",
     "age": "all",

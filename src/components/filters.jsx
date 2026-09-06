@@ -93,7 +93,7 @@ export default function Filters({ data }) {
             : selectedGuild == "sfc"
               ? "SF Chronicle"
               : "SFGate"}{" "}
-          -{" "}
+          ›{" "}
           {capitalizeFirstLetter(selectedDept) == "All"
             ? "All departments"
             : capitalizeFirstLetter(selectedDept)}
