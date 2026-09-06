@@ -1,686 +1,1355 @@
 [
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1744,
-        "medianAnnual": 90702
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1762,
-        "medianAnnual": 91672
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1730,
-        "medianAnnual": 90002
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1682,
-        "medianAnnual": 87422
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1812,
-        "medianAnnual": 94232
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1640,
-        "medianAnnual": 85258
-    },
-    {
-        "guild": "all",
-        "teams": "all",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1862,
-        "medianAnnual": 96860
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1722,
-        "medianAnnual": 89584
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1668,
-        "medianAnnual": 86714
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1806,
-        "medianAnnual": 93904
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1782,
-        "medianAnnual": 92624
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1616,
-        "medianAnnual": 84058
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1680,
-        "medianAnnual": 87338
-    },
-    {
-        "guild": "all",
-        "teams": "designers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1766,
-        "medianAnnual": 91828
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1750,
-        "medianAnnual": 90986
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1876,
-        "medianAnnual": 97556
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1730,
-        "medianAnnual": 90002
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1668,
-        "medianAnnual": 86708
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1810,
-        "medianAnnual": 94156
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1914,
-        "medianAnnual": 99522
-    },
-    {
-        "guild": "all",
-        "teams": "reporters",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1652,
-        "medianAnnual": 85912
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 2464,
-        "medianAnnual": 128124
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 2110,
-        "medianAnnual": 109702
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 2482,
-        "medianAnnual": 129062
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1736,
-        "medianAnnual": 90298
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 2518,
-        "medianAnnual": 130950
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 2500,
-        "medianAnnual": 130000
-    },
-    {
-        "guild": "all",
-        "teams": "critics and columnists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 2414,
-        "medianAnnual": 125562
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1514,
-        "medianAnnual": 78778
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1654,
-        "medianAnnual": 86004
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1514,
-        "medianAnnual": 78756
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1584,
-        "medianAnnual": 82380
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1508,
-        "medianAnnual": 78400
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1672,
-        "medianAnnual": 86946
-    },
-    {
-        "guild": "all",
-        "teams": "digital",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1500,
-        "medianAnnual": 78018
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1826,
-        "medianAnnual": 95000
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1760,
-        "medianAnnual": 91540
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1868,
-        "medianAnnual": 97140
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1804,
-        "medianAnnual": 93760
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1826,
-        "medianAnnual": 95000
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1760,
-        "medianAnnual": 91540
-    },
-    {
-        "guild": "all",
-        "teams": "data reporters and developers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1836,
-        "medianAnnual": 95490
-    },
-    {
-        "guild": "all",
-        "teams": "metereologists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 2156,
-        "medianAnnual": 112090
-    },
-    {
-        "guild": "all",
-        "teams": "metereologists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 2354,
-        "medianAnnual": 122400
-    },
-    {
-        "guild": "all",
-        "teams": "metereologists",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1958,
-        "medianAnnual": 101778
-    },
-    {
-        "guild": "all",
-        "teams": "copy editors",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1646,
-        "medianAnnual": 85548
-    },
-    {
-        "guild": "all",
-        "teams": "copy editors",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1554,
-        "medianAnnual": 80802
-    },
-    {
-        "guild": "all",
-        "teams": "copy editors",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1786,
-        "medianAnnual": 92870
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1658,
-        "medianAnnual": 86218
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1696,
-        "medianAnnual": 88214
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1658,
-        "medianAnnual": 86218
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1658,
-        "medianAnnual": 86218
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1686,
-        "medianAnnual": 87714
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1792,
-        "medianAnnual": 93198
-    },
-    {
-        "guild": "all",
-        "teams": "photographers",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1604,
-        "medianAnnual": 83434
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1766,
-        "medianAnnual": 91812
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1864,
-        "medianAnnual": 96914
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1668,
-        "medianAnnual": 86710
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1610,
-        "medianAnnual": 83676
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1916,
-        "medianAnnual": 99656
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1932,
-        "medianAnnual": 100446
-    },
-    {
-        "guild": "all",
-        "teams": "sports",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1554,
-        "medianAnnual": 80768
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1778,
-        "medianAnnual": 92422
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1800,
-        "medianAnnual": 93602
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1778,
-        "medianAnnual": 92422
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1612,
-        "medianAnnual": 83774
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1800,
-        "medianAnnual": 93602
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1820,
-        "medianAnnual": 94618
-    },
-    {
-        "guild": "all",
-        "teams": "editors",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1778,
-        "medianAnnual": 92422
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1730,
-        "medianAnnual": 90002
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "men",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1538,
-        "medianAnnual": 80018
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "women and nonbinary",
-        "ethnicity": "all",
-        "age": "all",
-        "medianWeek": 1730,
-        "medianAnnual": 90002
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "all",
-        "ethnicity": "nonwhite",
-        "age": "all",
-        "medianWeek": 1730,
-        "medianAnnual": 90002
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "all",
-        "ethnicity": "white",
-        "age": "all",
-        "medianWeek": 1654,
-        "medianAnnual": 86008
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "40+",
-        "medianWeek": 1908,
-        "medianAnnual": 99202
-    },
-    {
-        "guild": "all",
-        "teams": "part-time",
-        "gender": "all",
-        "ethnicity": "all",
-        "age": "under 40",
-        "medianWeek": 1578,
-        "medianAnnual": 82014
-    }
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1744,
+    "medianAnnual": 90702
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1762,
+    "medianAnnual": 91672
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1730,
+    "medianAnnual": 90002
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1682,
+    "medianAnnual": 87422
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1812,
+    "medianAnnual": 94232
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1640,
+    "medianAnnual": 85258
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1862,
+    "medianAnnual": 96860
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1722,
+    "medianAnnual": 89584,
+    "numEmployees": 7
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86714,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1806,
+    "medianAnnual": 93904,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1782,
+    "medianAnnual": 92624
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1616,
+    "medianAnnual": 84058
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1680,
+    "medianAnnual": 87338
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1766,
+    "medianAnnual": 91828
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1750,
+    "medianAnnual": 90986
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1876,
+    "medianAnnual": 97556
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1730,
+    "medianAnnual": 90002
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86708
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1810,
+    "medianAnnual": 94156
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1914,
+    "medianAnnual": 99522
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1652,
+    "medianAnnual": 85912
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2464,
+    "medianAnnual": 128124
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2110,
+    "medianAnnual": 109702
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2482,
+    "medianAnnual": 129062
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1736,
+    "medianAnnual": 90298
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 2518,
+    "medianAnnual": 130950
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 2500,
+    "medianAnnual": 130000
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 2414,
+    "medianAnnual": 125562
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1514,
+    "medianAnnual": 78778
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1654,
+    "medianAnnual": 86004
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1514,
+    "medianAnnual": 78756
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1584,
+    "medianAnnual": 82380
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1508,
+    "medianAnnual": 78400
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1672,
+    "medianAnnual": 86946
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1500,
+    "medianAnnual": 78018
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1826,
+    "medianAnnual": 95000
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1760,
+    "medianAnnual": 91540
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1868,
+    "medianAnnual": 97140
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1804,
+    "medianAnnual": 93760
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1826,
+    "medianAnnual": 95000
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1760,
+    "medianAnnual": 91540
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1836,
+    "medianAnnual": 95490
+  },
+  {
+    "guild": "all",
+    "teams": "metereologists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2156,
+    "medianAnnual": 112090
+  },
+  {
+    "guild": "all",
+    "teams": "metereologists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 2354,
+    "medianAnnual": 122400
+  },
+  {
+    "guild": "all",
+    "teams": "metereologists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1958,
+    "medianAnnual": 101778
+  },
+  {
+    "guild": "all",
+    "teams": "copy editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1646,
+    "medianAnnual": 85548
+  },
+  {
+    "guild": "all",
+    "teams": "copy editors",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1554,
+    "medianAnnual": 80802
+  },
+  {
+    "guild": "all",
+    "teams": "copy editors",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1786,
+    "medianAnnual": 92870
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1658,
+    "medianAnnual": 86218
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1696,
+    "medianAnnual": 88214
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1658,
+    "medianAnnual": 86218
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1658,
+    "medianAnnual": 86218
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1686,
+    "medianAnnual": 87714
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1792,
+    "medianAnnual": 93198
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1604,
+    "medianAnnual": 83434
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1766,
+    "medianAnnual": 91812
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1864,
+    "medianAnnual": 96914
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86710
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1610,
+    "medianAnnual": 83676
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1916,
+    "medianAnnual": 99656
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1932,
+    "medianAnnual": 100446
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1554,
+    "medianAnnual": 80768
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1778,
+    "medianAnnual": 92422
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1800,
+    "medianAnnual": 93602
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1778,
+    "medianAnnual": 92422
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1612,
+    "medianAnnual": 83774
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1800,
+    "medianAnnual": 93602
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1820,
+    "medianAnnual": 94618
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1778,
+    "medianAnnual": 92422
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1730,
+    "medianAnnual": 90002
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1538,
+    "medianAnnual": 80018
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1730,
+    "medianAnnual": 90002
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1730,
+    "medianAnnual": 90002
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1654,
+    "medianAnnual": 86008
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1908,
+    "medianAnnual": 99202
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1578,
+    "medianAnnual": 82014
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1796,
+    "medianAnnual": 93418
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1846,
+    "medianAnnual": 95978
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1766,
+    "medianAnnual": 91810
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1720,
+    "medianAnnual": 89408
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1878,
+    "medianAnnual": 97704
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1830,
+    "medianAnnual": 95180
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1732,
+    "medianAnnual": 90066
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1766,
+    "medianAnnual": 91828
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1766,
+    "medianAnnual": 91828
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86714
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1846,
+    "medianAnnual": 95978
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1680,
+    "medianAnnual": 87338
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1806,
+    "medianAnnual": 93904
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1812,
+    "medianAnnual": 94232
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1896,
+    "medianAnnual": 98614
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1794,
+    "medianAnnual": 93338
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1722,
+    "medianAnnual": 89556
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1854,
+    "medianAnnual": 96442
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1914,
+    "medianAnnual": 99522
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1732,
+    "medianAnnual": 90066
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2464,
+    "medianAnnual": 128124
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2110,
+    "medianAnnual": 109702
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2482,
+    "medianAnnual": 129062
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1736,
+    "medianAnnual": 90298
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 2518,
+    "medianAnnual": 130950
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 2500,
+    "medianAnnual": 130000
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 2414,
+    "medianAnnual": 125562
+  },
+  {
+    "guild": "sfc",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1516,
+    "medianAnnual": 78800
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1794,
+    "medianAnnual": 93270
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1760,
+    "medianAnnual": 91540
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1826,
+    "medianAnnual": 95000
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1760,
+    "medianAnnual": 91540
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1826,
+    "medianAnnual": 95000
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1778,
+    "medianAnnual": 92494
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1800,
+    "medianAnnual": 93602
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1712,
+    "medianAnnual": 89004
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1792,
+    "medianAnnual": 93198
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1766,
+    "medianAnnual": 91790
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1800,
+    "medianAnnual": 93602
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1686,
+    "medianAnnual": 87714
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1864,
+    "medianAnnual": 96914
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1882,
+    "medianAnnual": 97890
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86710
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1668,
+    "medianAnnual": 86710
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1916,
+    "medianAnnual": 99656
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1932,
+    "medianAnnual": 100446
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1610,
+    "medianAnnual": 83740
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1550,
+    "medianAnnual": 80664
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1568,
+    "medianAnnual": 81586
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1538,
+    "medianAnnual": 80014
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1532,
+    "medianAnnual": 79700
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1570,
+    "medianAnnual": 81676
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1868,
+    "medianAnnual": 97158
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1538,
+    "medianAnnual": 79970
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1508,
+    "medianAnnual": 78380
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1508,
+    "medianAnnual": 78380
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1514,
+    "medianAnnual": 78764
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1490,
+    "medianAnnual": 77452
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1532,
+    "medianAnnual": 79626
+  },
+  {
+    "guild": "sfgate",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1526,
+    "medianAnnual": 79382
+  },
+  {
+    "guild": "sfgate",
+    "teams": "digital",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1654,
+    "medianAnnual": 86004
+  },
+  {
+    "guild": "sfgate",
+    "teams": "digital",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1514,
+    "medianAnnual": 78756
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1554,
+    "medianAnnual": 80802
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1486,
+    "medianAnnual": 77262
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1654,
+    "medianAnnual": 86008
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1500,
+    "medianAnnual": 78046
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1558,
+    "medianAnnual": 81016
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1718,
+    "medianAnnual": 89372
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1538,
+    "medianAnnual": 80018
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1812,
+    "medianAnnual": 94222
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1834,
+    "medianAnnual": 95402
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "women and nonbinary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1790,
+    "medianAnnual": 93040
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1874,
+    "medianAnnual": 97434
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1790,
+    "medianAnnual": 93040
+  }
 ]

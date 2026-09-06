@@ -25,7 +25,7 @@ export default function BasicScale({
 
   const boundsWidth = width - margin.right - margin.left;
   const xScale = scaleLinear()
-    .domain([0, maxShortened])
+    .domain([70, maxShortened]) // changed this from 0 because the minimum salary is ~70k
     .range([0, boundsWidth]);
 
   if (selectedGuild == "sfc") {

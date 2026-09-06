@@ -85,6 +85,12 @@ export default function Filters({ data }) {
       </div>
       <div className="deptResultsContainer">
         <h2 className="deptSubHed">
+          {selectedGuild == "all"
+            ? "Guild-wide"
+            : selectedGuild == "sfc"
+              ? "SF Chronicle"
+              : "SFGate"}{" "}
+          -{" "}
           {capitalizeFirstLetter(selectedDept) == "All"
             ? "All departments"
             : capitalizeFirstLetter(selectedDept)}
