@@ -81,6 +81,9 @@ export default function Filters({ data }) {
         </div>
         <p class="resultsInstructions">
           Example results from filtering salary data
+          <br />
+          <br />
+          Insert static D3 scale with dots (guild-wide data?)
         </p>
       </div>
       <div className="deptResultsContainer">

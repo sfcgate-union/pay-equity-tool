@@ -9,14 +9,12 @@ export default function Methodology() {
         median pay has helped us successfully bargain for higher salary floors
         and guaranteed minimum yearly raises. TKTK{" "}
       </p>
-      <br />
       <p>
         We calculated median salary data by multiplying median weekly pay among
         guild members ... TKTK. Some departments or roles are broken down by
         only ethnicity, age or gender, or not analyzed by any demographic
         variable due to having too few members.
       </p>
-      <br />
       <p>The following guild members contributed to this report:</p>
       <ul>
         <li>Nanette Asimov, higher education reporter</li>
@@ -25,7 +23,6 @@ export default function Methodology() {
         <li>Sophia Bollag, politics reporter</li>
         <li>Jenny Kwon, graphics reporter</li>
       </ul>
-      <br />
       <p>
         Special shoutout to The Washington Post Guild for creating and releasing{" "}
         <a href="https://postguild.org/2022-pay-study-explore-data/">
