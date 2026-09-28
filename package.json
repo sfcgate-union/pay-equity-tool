@@ -1,8 +1,8 @@
 {
   "name": "pay-equity",
   "version": "0.1.0",
-  "homepage": "https://sfcgate-union.github.io/pay-equity",
-  "private": true,
+  "homepage": "https://sfcgate-union.github.io/pay-equity-tool",
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

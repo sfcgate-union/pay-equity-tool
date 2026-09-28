@@ -6,6 +6,177 @@ import {
 } from "./utils.jsx";
 import BasicScale from "./basicScale.jsx";
 
+const demographicComparison = ({ factor, filteredData }) => {
+  switch (factor) {
+    case "age":
+      return (
+        <>
+          <h3>Salary by age</h3>
+          {filteredData.age != "all" && (
+            <BasicScale
+              data={filteredData}
+              selectedGuild={selectedGuild}
+              selectedDept={selectedDept}
+              factor={factor}
+            />
+          )}
+
+          {/* Under 40 */}
+          {filteredData.age != "all" && filteredData.age == "under 40" && (
+            <>
+              <h4 className="deptGroupSubCategory">Under 40 years</h4>
+              {filteredData.guild == "sfc" ? (
+                <p className="deptComparison">
+                  Employees under 40 years old earn a median of{" "}
+                  {formatSalaries(filteredData.medianAnnual)}, $
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[0],
+                  )}{" "}
+                  or{" "}
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[1],
+                  )}
+                  %{" "}
+                  {
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[2]
+                  }{" "}
+                  than the newsroom median.
+                </p>
+              ) : (
+                <p className="deptComparison">
+                  Employees under 40 years old earn a median of{" "}
+                  {formatSalaries(filteredData.medianAnnual)}, $
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[0],
+                  )}{" "}
+                  or{" "}
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[1],
+                  )}
+                  %{" "}
+                  {
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[2]
+                  }{" "}
+                  than the newsroom median.
+                </p>
+              )}
+            </>
+          )}
+
+          {/* 40+*/}
+          {filteredData.age != "all" && filteredData.age == "40+" && (
+            <>
+              {/* <h4 className="deptGroupSubCategory">
+                  40+ years: {formatSalaries(dept.medianAnnual)}
+                </h4> */}
+              {filteredData.guild == "sfc" ? (
+                <p className="deptComparison">
+                  Employees 40+ years old earn a median of{" "}
+                  {formatSalaries(filteredData.medianAnnual)}, $
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[0],
+                  )}{" "}
+                  or{" "}
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[1],
+                  )}
+                  %{" "}
+                  {
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfcMedianAnnual,
+                    )[2]
+                  }{" "}
+                  than the newsroom median.
+                </p>
+              ) : (
+                <p className="deptComparison">
+                  Employees 40+ years old earn a median of{" "}
+                  {formatSalaries(filteredData.medianAnnual)}, $
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[0],
+                  )}{" "}
+                  or{" "}
+                  {formatSalaries(
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[1],
+                  )}
+                  %{" "}
+                  {
+                    calculateSalaryDifference(
+                      filteredData.medianAnnual,
+                      sfgateMedianAnnual,
+                    )[2]
+                  }{" "}
+                  than the newsroom median.
+                </p>
+              )}
+            </>
+          )}
+        </>
+      );
+
+    case "ethnicity":
+      return (
+        <>
+          <h3>Salary by ethnicity</h3>
+          {dept.ethnicity != "all" && (
+            <BasicScale
+              data={filteredData}
+              selectedGuild={selectedGuild}
+              selectedDept={selectedDept}
+              factor={factor}
+            />
+          )}
+        </>
+      );
+
+    case "gender":
+      return (
+        <>
+          <h3>Salary by gender</h3>
+          {dept.gender != "all" && (
+            <BasicScale
+              data={filteredData}
+              selectedGuild={selectedGuild}
+              selectedDept={selectedDept}
+              factor={factor}
+            />
+          )}
+        </>
+      );
+  }
+};
+
 export default function Filters({ data }) {
   /* set "all" as default for both guild and dept? */
   const [selectedGuild, setSelectedGuild] = useState("all");
@@ -99,22 +270,29 @@ export default function Filters({ data }) {
             : capitalizeFirstLetter(selectedDept)}
         </h2>
 
+        <demographicComparison
+          factor="gender"
+          data={data.filter(
+            (dept) => dept.guild == selectedGuild && dept.teams == selectedDept,
+          )}
+        />
+
         {/* if dept. is too small, find a way to display overall median salary not broken down by any demographic factor */}
-        {data
+        {/* {data
           .filter(
             (dept) => dept.guild == selectedGuild && dept.teams == selectedDept,
           )
           .map((dept) => (
-            <>
-              {dept.age == "all" &&
+            <> */}
+        {/* {dept.age == "all" &&
                 dept.gender == "all" &&
                 dept.ethnicity == "all" && (
                   <h4 className="deptGroupSubCategory">
                     Overall: {formatSalaries(dept.medianAnnual)}
                   </h4>
-                )}
+                )} */}
 
-              {dept.age != "all" && dept.age == "40+" && (
+        {/* {dept.age != "all" && dept.age == "40+" && (
                 <>
                   <h4 className="deptGroupSubCategory">
                     40+ years: {formatSalaries(dept.medianAnnual)}
@@ -238,9 +416,9 @@ export default function Filters({ data }) {
                   selectedDept={selectedDept}
                   factor="age"
                 />
-              )}
+              )} */}
 
-              {dept.gender != "all" && dept.gender == "women and nonbinary" && (
+        {/* {dept.gender != "all" && dept.gender == "women and nonbinary" && (
                 <>
                   <h4 className="deptGroupSubCategory">
                     Women and non-binary: {formatSalaries(dept.medianAnnual)}
@@ -364,9 +542,9 @@ export default function Filters({ data }) {
                   selectedDept={selectedDept}
                   factor="gender"
                 />
-              )}
+              )} */}
 
-              {dept.ethnicity != "all" && dept.ethnicity == "nonwhite" && (
+        {/* {dept.ethnicity != "all" && dept.ethnicity == "nonwhite" && (
                 <>
                   <h4 className="deptGroupSubCategory">
                     Non-white: {formatSalaries(dept.medianAnnual)}
@@ -479,18 +657,18 @@ export default function Filters({ data }) {
                       }{" "}
                       than the newsroom median.
                     </p>
-                  )}
-                  {/* d3 scale */}
-                  <BasicScale
+                  )} */}
+        {/* d3 scale */}
+        {/* <BasicScale
                     data={data}
                     selectedGuild={selectedGuild}
                     selectedDept={selectedDept}
                     factor="ethnicity"
-                  />
-                </>
+                  /> */}
+        {/* </>
               )}
             </>
-          ))}
+          ))} */}
       </div>
     </>
   );

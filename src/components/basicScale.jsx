@@ -7,6 +7,32 @@ const tickLength = 8;
 const width = 700;
 const height = 100;
 
+//// pseudocode
+// make everything based on
+
+//// color variables for legend + scale — MAKE SURE THESE ARE COLOR BLIND ACCESSIBLE
+// make the overall guild median neutral dark gray
+const guildColor = "#3E3E3E";
+const guildColorDark = "#111111"; // 300 value
+
+// colors by race
+const whiteColor = "#26A0A5";
+const nonWhiteColor = "#FFBC30";
+const whiteColorDark = "#00505A"; // 300 value
+const nonWhiteColorDark = "#B17A00"; // 300 value
+
+// colors by age
+const over40Color = "#025BAF";
+const under40Color = "#DF7821";
+const over40ColorDark = "#003166"; // 300 value
+const under40ColorDark = "#B05A0C"; // 300 value
+
+// colors by gender
+const wnbColor = "#97668F";
+const maleColor = "#819958";
+const wnbColorDark = "#724C6C"; // 300 value
+const maleColorDark = "#5F7539"; // 300 value
+
 export default function BasicScale({
   data,
   selectedGuild,
@@ -14,9 +40,14 @@ export default function BasicScale({
   factor,
 }) {
   let guildDot;
-  let dotOne;
-  let dotTwo;
+  let whiteDot;
+  let nonWhiteDot;
+  let over40Dot;
+  let under40Dot;
+  let wnbDot;
+  let maleDot;
 
+  // not using these variables - delete?
   let maxMedian = Math.max(...data.map((l) => l.medianAnnual));
   let minMedian = Math.min(...data.map((l) => l.medianAnnual));
   /* for building the scale — in 10s */
@@ -28,6 +59,7 @@ export default function BasicScale({
     .domain([70, maxShortened]) // changed this from 0 because the minimum salary is ~70k
     .range([0, boundsWidth]);
 
+  // DEBUG: is there a way to make this not based on hardcoded numbers?
   if (selectedGuild == "sfc") {
     guildDot = xScale(Math.round(93786 / 1000));
   } else if (selectedGuild == "sfgate") {
@@ -40,7 +72,7 @@ export default function BasicScale({
   // for different demographic factors
   if (factor == "gender") {
     // for women and nonbinary
-    dotOne = xScale(
+    wnbDot = xScale(
       Math.round(
         data
           .filter(
@@ -53,7 +85,7 @@ export default function BasicScale({
       ),
     );
     // for men
-    dotTwo = xScale(
+    maleDot = xScale(
       Math.round(
         data
           .filter(
@@ -67,7 +99,7 @@ export default function BasicScale({
     );
   } else if (factor == "age") {
     // for 40+
-    dotOne = xScale(
+    over40Dot = xScale(
       Math.round(
         data
           .filter(
@@ -80,7 +112,7 @@ export default function BasicScale({
       ),
     );
     // for under 40
-    dotTwo = xScale(
+    under40Dot = xScale(
       Math.round(
         data
           .filter(
@@ -93,7 +125,7 @@ export default function BasicScale({
       ),
     );
   } else if (factor == "ethnicity") {
-    dotOne = xScale(
+    nonWhiteDot = xScale(
       Math.round(
         data
           .filter(
@@ -105,7 +137,7 @@ export default function BasicScale({
           .map((dept) => dept.medianAnnual)[0] / 1000,
       ),
     );
-    dotTwo = xScale(
+    whiteDot = xScale(
       Math.round(
         data
           .filter(
@@ -119,99 +151,347 @@ export default function BasicScale({
     );
   }
 
+  // DEBUG: optimize this to be more efficient
   return (
-    <svg width={width} height={height}>
-      {/* START Legend */}
-      <circle
-        cx="10"
-        cy="10"
-        opacity=".5"
-        stroke="#000"
-        stroke-width=".5"
-        r="4"
-        fill="#26A0A5"
-      />
-      <text fontSize="12px" text-anchor="start" x="20" y="14">
-        Median
-      </text>
-      <circle
-        cx="85"
-        cy="10"
-        stroke="#000"
-        stroke-width=".5"
-        r="5"
-        fill="#26A0A5"
-      />
-      <text fontSize="12px" text-anchor="start" x="95" y="14">
-        Women and nonbinary
-      </text>
-      <circle
-        cx="240"
-        cy="10"
-        stroke="#000"
-        stroke-width=".5"
-        r="5"
-        fill="#26A0A5"
-      />
-      <text fontSize="12px" text-anchor="start" x="250" y="14">
-        Men
-      </text>
-      {/* END Legend */}
-      <g transform={`translate(${margin.left}, ${margin.top})`}>
-        {/* Main horizontal line */}
-        <line
-          x1={0}
-          x2={boundsWidth}
-          y1={0}
-          y2={0}
-          stroke="black"
-          strokeWidth={0.5}
-        />
+    <>
+      {factor === "gender" && (
+        <svg width={width} height={height}>
+          {/* START Legend */}
+          <circle
+            cx="10"
+            cy="10"
+            opacity=".5"
+            stroke="#000"
+            stroke-width=".5"
+            r="4"
+            fill={guildColor}
+          />
+          <text
+            fill={guildColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="20"
+            y="14"
+          >
+            Median
+          </text>
+          <circle
+            cx="85"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={wnbColor}
+          />
+          <text
+            fill={wnbColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="95"
+            y="14"
+          >
+            Women and nonbinary
+          </text>
+          <circle
+            cx="240"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={maleColor}
+          />
+          <text
+            fill={maleColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="250"
+            y="14"
+          >
+            Men
+          </text>
+          {/* END Legend */}
 
-        {/* Ticks and Labels */}
-        {xScale.ticks(10).map((value) => (
-          <g key={value} transform={`translate(${xScale(value)}, 0)`}>
-            <line y2={tickLength} stroke="currentColor" />
-            <text
-              style={{
-                fontSize: "14px",
-                textAnchor: "middle",
-                transform: "translateY(25px)",
-              }}
-            >
-              {value + "K"}
-            </text>
+          <g transform={`translate(${margin.left}, ${margin.top})`}>
+            {/* Main horizontal line */}
+            <line
+              x1={0}
+              x2={boundsWidth}
+              y1={0}
+              y2={0}
+              stroke="black"
+              strokeWidth={0.5}
+            />
+
+            {/* Ticks and Labels */}
+            {xScale.ticks(10).map((value) => (
+              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                <line y2={tickLength} stroke="currentColor" />
+                <text
+                  style={{
+                    fontSize: "14px",
+                    textAnchor: "middle",
+                    transform: "translateY(25px)",
+                  }}
+                >
+                  {value + "K"}
+                </text>
+              </g>
+            ))}
+
+            {/* *** Dots on the scale *** */}
+            {/* newsroom median */}
+            <circle
+              cx={guildDot}
+              opacity=".5"
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="4"
+              fill={guildColor}
+            />
+            <circle
+              cx={wnbDot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={wnbColor}
+            />
+            <circle
+              cx={maleDot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={maleColor}
+            />
           </g>
-        ))}
+        </svg>
+      )}
 
-        {/* *** Dots on the scale *** */}
-        {/* newsroom median */}
-        <circle
-          cx={guildDot}
-          opacity=".5"
-          stroke="#000"
-          stroke-width=".5"
-          cy="0"
-          r="4"
-          fill="#26A0A5"
-        />
-        <circle
-          cx={dotOne}
-          stroke="#000"
-          stroke-width=".5"
-          cy="0"
-          r="5"
-          fill="#26A0A5"
-        />
-        <circle
-          cx={dotTwo}
-          stroke="#000"
-          stroke-width=".5"
-          cy="0"
-          r="5"
-          fill="#26A0A5"
-        />
-      </g>
-    </svg>
+      {factor === "age" && (
+        <svg width={width} height={height}>
+          {/* START Legend */}
+          <circle
+            cx="10"
+            cy="10"
+            opacity=".5"
+            stroke="#000"
+            stroke-width=".5"
+            r="4"
+            fill={guildColor}
+          />
+          <text
+            fill={guildColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="20"
+            y="14"
+          >
+            Median
+          </text>
+          <circle
+            cx="85"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={under40Color}
+          />
+          <text
+            fill={under40ColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="95"
+            y="14"
+          >
+            Under 40 years old
+          </text>
+          <circle
+            cx="220"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={over40Color}
+          />
+          <text
+            fill={over40ColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="230"
+            y="14"
+          >
+            40+ years
+          </text>
+          {/* END Legend */}
+
+          <g transform={`translate(${margin.left}, ${margin.top})`}>
+            {/* Main horizontal line */}
+            <line
+              x1={0}
+              x2={boundsWidth}
+              y1={0}
+              y2={0}
+              stroke="black"
+              strokeWidth={0.5}
+            />
+
+            {/* Ticks and Labels */}
+            {xScale.ticks(10).map((value) => (
+              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                <line y2={tickLength} stroke="currentColor" />
+                <text
+                  style={{
+                    fontSize: "14px",
+                    textAnchor: "middle",
+                    transform: "translateY(25px)",
+                  }}
+                >
+                  {value + "K"}
+                </text>
+              </g>
+            ))}
+
+            {/* *** Dots on the scale *** */}
+            {/* newsroom median */}
+            <circle
+              cx={guildDot}
+              opacity=".5"
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="4"
+              fill={guildColor}
+            />
+            <circle
+              cx={over40Dot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={over40Color}
+            />
+            <circle
+              cx={under40Dot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={under40Color}
+            />
+          </g>
+        </svg>
+      )}
+
+      {factor === "ethnicity" && (
+        <svg width={width} height={height}>
+          {/* START Legend */}
+          <circle
+            cx="10"
+            cy="10"
+            opacity=".5"
+            stroke="#000"
+            stroke-width=".5"
+            r="4"
+            fill={guildColor}
+          />
+          <text fontSize="12px" text-anchor="start" x="20" y="14">
+            Median
+          </text>
+          <circle
+            cx="85"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={whiteColor}
+          />
+          <text
+            fill={whiteColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="95"
+            y="14"
+          >
+            White
+          </text>
+          <circle
+            cx="150"
+            cy="10"
+            stroke="#000"
+            stroke-width=".5"
+            r="5"
+            fill={nonWhiteColor}
+          />
+          <text
+            fill={nonWhiteColorDark}
+            fontSize="12px"
+            text-anchor="start"
+            x="160"
+            y="14"
+          >
+            Non-white
+          </text>
+          {/* END Legend */}
+
+          <g transform={`translate(${margin.left}, ${margin.top})`}>
+            {/* Main horizontal line */}
+            <line
+              x1={0}
+              x2={boundsWidth}
+              y1={0}
+              y2={0}
+              stroke="black"
+              strokeWidth={0.5}
+            />
+
+            {/* Ticks and Labels */}
+            {xScale.ticks(10).map((value) => (
+              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                <line y2={tickLength} stroke="currentColor" />
+                <text
+                  style={{
+                    fontSize: "14px",
+                    textAnchor: "middle",
+                    transform: "translateY(25px)",
+                  }}
+                >
+                  {value + "K"}
+                </text>
+              </g>
+            ))}
+
+            {/* *** Dots on the scale *** */}
+            {/* newsroom median */}
+            <circle
+              cx={guildDot}
+              opacity=".5"
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="4"
+              fill={guildColor}
+            />
+            <circle
+              cx={whiteDot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={whiteColor}
+            />
+            <circle
+              cx={nonWhiteDot}
+              stroke="#000"
+              stroke-width=".5"
+              cy="0"
+              r="5"
+              fill={nonWhiteColor}
+            />
+          </g>
+        </svg>
+      )}
+    </>
   );
 }
