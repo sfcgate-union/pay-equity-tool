@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { scaleLinear } from "d3";
 
-const margin = { top: 30, right: 30, bottom: 50, left: 50 };
+const margin = { top: 50, right: 30, bottom: 50, left: 50 };
 const tickLength = 8;
 
 const width = 700;
@@ -121,6 +121,42 @@ export default function BasicScale({
 
   return (
     <svg width={width} height={height}>
+      {/* START Legend */}
+      <circle
+        cx="10"
+        cy="10"
+        opacity=".5"
+        stroke="#000"
+        stroke-width=".5"
+        r="4"
+        fill="#26A0A5"
+      />
+      <text fontSize="12px" text-anchor="start" x="20" y="14">
+        Median
+      </text>
+      <circle
+        cx="85"
+        cy="10"
+        stroke="#000"
+        stroke-width=".5"
+        r="5"
+        fill="#26A0A5"
+      />
+      <text fontSize="12px" text-anchor="start" x="95" y="14">
+        Women and nonbinary
+      </text>
+      <circle
+        cx="240"
+        cy="10"
+        stroke="#000"
+        stroke-width=".5"
+        r="5"
+        fill="#26A0A5"
+      />
+      <text fontSize="12px" text-anchor="start" x="250" y="14">
+        Men
+      </text>
+      {/* END Legend */}
       <g transform={`translate(${margin.left}, ${margin.top})`}>
         {/* Main horizontal line */}
         <line
@@ -159,7 +195,6 @@ export default function BasicScale({
           r="4"
           fill="#26A0A5"
         />
-
         <circle
           cx={dotOne}
           stroke="#000"

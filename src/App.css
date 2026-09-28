@@ -9,6 +9,10 @@
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 640px) {
+    width: 95dvw !important;
+  }
 }
 
 .header {
@@ -155,7 +159,8 @@ body {
 }
 
 .newsButton:hover,
-.newsButton:focus {
+.newsButton:focus,
+.newsButton:active {
   color: #fff;
   background-color: #909090;
 }
@@ -163,6 +168,9 @@ body {
 .deptDropdownWrapper {
   position: relative;
   max-width: 18rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: 0.25rem;
 }
 
 .deptDropdown {
