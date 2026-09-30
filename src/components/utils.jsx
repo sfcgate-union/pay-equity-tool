@@ -4,6 +4,17 @@ export function capitalizeFirstLetter(string) {
   return [...string][0].toUpperCase() + [...string].slice(1).join("");
 }
 
+export function calculateMedian(data) {
+  let array;
+  array = data.map((group) => Number(group.medianAnnual)).sort();
+  if (array.length % 2 === 0) {
+    // array with even number elements
+    return (array[array.length / 2] + array[array.length / 2 - 1]) / 2;
+  } else {
+    return array[(array.length - 1) / 2]; // array with odd number elements
+  }
+}
+
 export function formatSalaries(integer) {
   return integer.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }

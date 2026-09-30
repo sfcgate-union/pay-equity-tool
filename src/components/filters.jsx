@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   capitalizeFirstLetter,
+  calculateMedian,
   formatSalaries,
   calculateSalaryDifference,
 } from "./utils.jsx";
@@ -21,20 +22,36 @@ export default function Filters({ data }) {
   console.log({ selectedGuild, selectedDept });
 
   const demographicComparison = ({ factor, filteredData }) => {
+    console.log({ filteredData });
     switch (factor) {
       case "age":
         return (
           <>
             <h3>Salary by age</h3>
+
             {filteredData.age != "all" && (
-              <BasicScale
-                data={filteredData}
-                selectedGuild={selectedGuild}
-                selectedDept={selectedDept}
-                factor={factor}
-              />
+              <>
+                <p className="deptComparison">
+                  Employees <i>under 40 years old</i> earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.age == "under 40")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  , while employees <i>40 years and older</i> earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.age == "40+")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  .
+                </p>
+                <BasicScale
+                  data={filteredData}
+                  selectedGuild={selectedGuild}
+                  selectedDept={selectedDept}
+                  factor={factor}
+                />
+              </>
             )}
 
+            {/* TO DO: you need to still calculateSalaryDifference, but the rest of the code can be deleted after!*/}
             {/* Under 40 */}
             {filteredData.age != "all" && filteredData.age == "under 40" && (
               <>
@@ -165,12 +182,25 @@ export default function Filters({ data }) {
           <>
             <h3>Salary by ethnicity</h3>
             {filteredData.ethnicity != "all" && (
-              <BasicScale
-                data={filteredData}
-                selectedGuild={selectedGuild}
-                selectedDept={selectedDept}
-                factor={factor}
-              />
+              <>
+                <p className="deptComparison">
+                  Non-white employees earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.ethnicity == "nonwhite")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  , while white employees earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.ethnicity == "white")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  .
+                </p>
+                <BasicScale
+                  data={filteredData}
+                  selectedGuild={selectedGuild}
+                  selectedDept={selectedDept}
+                  factor={factor}
+                />
+              </>
             )}
           </>
         );
@@ -181,12 +211,25 @@ export default function Filters({ data }) {
           <>
             <h3>Salary by gender</h3>
             {filteredData.gender != "all" && (
-              <BasicScale
-                data={filteredData}
-                selectedGuild={selectedGuild}
-                selectedDept={selectedDept}
-                factor={factor}
-              />
+              <>
+                <p className="deptComparison">
+                  Female and nonbinary-identifying employees earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.gender == "women and nonbinary")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  , while male-identifying employees earn a median of{" "}
+                  {filteredData
+                    .filter((group) => group.gender == "men")
+                    .map((group) => formatSalaries(group.medianAnnual))}
+                  .
+                </p>
+                <BasicScale
+                  data={filteredData}
+                  selectedGuild={selectedGuild}
+                  selectedDept={selectedDept}
+                  factor={factor}
+                />
+              </>
             )}
           </>
         );
@@ -279,6 +322,10 @@ export default function Filters({ data }) {
             ? "All departments"
             : capitalizeFirstLetter(selectedDept)}
         </h2>
+
+        <p className="deptComparison">
+          Put here the overall department median.
+        </p>
 
         {demographicComparison({
           factor: "ethnicity",
