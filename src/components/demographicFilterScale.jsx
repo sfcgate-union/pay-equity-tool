@@ -19,12 +19,6 @@ export default function demographicFilterScale({
 }) {
   return (
     <>
-      {/* {data
-        .filter(
-          (dept) => dept.guild == selectedGuild && dept.teams == selectedDept,
-        )
-        .map(
-          <> */}
       <h3>Salary by {factor}</h3>
       <BasicScale
         data={data}
@@ -32,9 +26,6 @@ export default function demographicFilterScale({
         selectedDept={selectedDept}
         factor={factor}
       />
-      {/* ,
-          </>,
-        )} */}
     </>
   );
 }

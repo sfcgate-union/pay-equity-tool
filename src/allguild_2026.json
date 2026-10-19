@@ -1,0 +1,1162 @@
+[
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1789.75,
+    "medianAnnual": 93067,
+    "numEmployees": 122
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1838.18,
+    "medianAnnual": 95585.36,
+    "numEmployees": 50
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1761.05,
+    "medianAnnual": 91574.73,
+    "numEmployees": 72
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1718.57,
+    "medianAnnual": 89365.56,
+    "numEmployees": 46
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1880.26,
+    "medianAnnual": 97773.44,
+    "numEmployees": 76
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1921.83,
+    "medianAnnual": 99935.06,
+    "numEmployees": 56
+  },
+  {
+    "guild": "all",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1665.53,
+    "medianAnnual": 86607.56,
+    "numEmployees": 66
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1514.12,
+    "medianAnnual": 78734.19,
+    "numEmployees": 12
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1515.52,
+    "medianAnnual": 78806.94,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1463.63,
+    "medianAnnual": 76108.97,
+    "numEmployees": 8
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1514.12,
+    "medianAnnual": 78734.19,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1465.03,
+    "medianAnnual": 76181.72,
+    "numEmployees": 8
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1673.38,
+    "medianAnnual": 87015.76,
+    "numEmployees": 5
+  },
+  {
+    "guild": "all",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1461.46,
+    "medianAnnual": 75995.92,
+    "numEmployees": 7
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1811.55,
+    "medianAnnual": 94200.57,
+    "numEmployees": 52
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1933.99,
+    "medianAnnual": 100567.35,
+    "numEmployees": 18
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1766.68,
+    "medianAnnual": 91867.46,
+    "numEmployees": 34
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1685.18,
+    "medianAnnual": 87629.26,
+    "numEmployees": 19
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1923.08,
+    "medianAnnual": 99999.95,
+    "numEmployees": 33
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1954.08,
+    "medianAnnual": 101611.95,
+    "numEmployees": 21
+  },
+  {
+    "guild": "all",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1730.8,
+    "medianAnnual": 90001.6,
+    "numEmployees": 31
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2304.65,
+    "medianAnnual": 119841.75,
+    "numEmployees": 10
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2057.75,
+    "medianAnnual": 107003.21,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2480.94,
+    "medianAnnual": 129009.14,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1942.56,
+    "medianAnnual": 101013.12,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 2436.35,
+    "medianAnnual": 126690.2,
+    "numEmployees": 7
+  },
+  {
+    "guild": "all",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1860.65,
+    "medianAnnual": 96753.8,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1772.8,
+    "medianAnnual": 92185.6,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1713.17,
+    "medianAnnual": 89084.84,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1882.66,
+    "medianAnnual": 97898.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1875,
+    "medianAnnual": 97500,
+    "numEmployees": 7
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1970.3,
+    "medianAnnual": 102455.81,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1649.11,
+    "medianAnnual": 85753.72,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1569.41,
+    "medianAnnual": 81609.11,
+    "numEmployees": 9
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1687,
+    "medianAnnual": 87723.9,
+    "numEmployees": 5
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1549.7,
+    "medianAnnual": 80584.56,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1687,
+    "medianAnnual": 87723.9,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1549.7,
+    "medianAnnual": 80584.56,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1723.97,
+    "medianAnnual": 89646.28,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1530.35,
+    "medianAnnual": 79577.94,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1745.85,
+    "medianAnnual": 90784.07,
+    "numEmployees": 10
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1758.26,
+    "medianAnnual": 91429.52,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1745.85,
+    "medianAnnual": 90784.07,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1767.57,
+    "medianAnnual": 91913.77,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1720.53,
+    "medianAnnual": 89467.3,
+    "numEmployees": 4
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1843.93,
+    "medianAnnual": 95884.36,
+    "numEmployees": 5
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1672.59,
+    "medianAnnual": 86974.68,
+    "numEmployees": 5
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1839.12,
+    "medianAnnual": 95634.16,
+    "numEmployees": 6
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1795.58,
+    "medianAnnual": 93370.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1900,
+    "medianAnnual": 98800,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1795.58,
+    "medianAnnual": 93370.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1900,
+    "medianAnnual": 98800,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "Meteorologists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2228.03,
+    "medianAnnual": 115857.56,
+    "numEmployees": 2
+  },
+  {
+    "guild": "all",
+    "teams": "copy editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1678.07,
+    "medianAnnual": 87259.64,
+    "numEmployees": 3
+  },
+  {
+    "guild": "all",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1405.6,
+    "medianAnnual": 73091.2,
+    "numEmployees": 1
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1856.51,
+    "medianAnnual": 96538.75,
+    "numEmployees": 92
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1875,
+    "medianAnnual": 97500,
+    "numEmployees": 39
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1835.4,
+    "medianAnnual": 95441.01,
+    "numEmployees": 53
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1767.95,
+    "medianAnnual": 91933.35,
+    "numEmployees": 33
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1923.2,
+    "medianAnnual": 100006.4,
+    "numEmployees": 59
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1923.08,
+    "medianAnnual": 99999.95,
+    "numEmployees": 47
+  },
+  {
+    "guild": "sfc",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1767.95,
+    "medianAnnual": 91933.35,
+    "numEmployees": 45
+  },
+  {
+    "guild": "sfc",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1620.08,
+    "medianAnnual": 84244.11,
+    "numEmployees": 2
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1899.56,
+    "medianAnnual": 98777.17,
+    "numEmployees": 44
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1954.08,
+    "medianAnnual": 101611.95,
+    "numEmployees": 17
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1835.4,
+    "medianAnnual": 95441.01,
+    "numEmployees": 27
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1756.69,
+    "medianAnnual": 91347.88,
+    "numEmployees": 13
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1923.2,
+    "medianAnnual": 100006.4,
+    "numEmployees": 31
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1954.08,
+    "medianAnnual": 101611.95,
+    "numEmployees": 21
+  },
+  {
+    "guild": "sfc",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1767.95,
+    "medianAnnual": 91933.35,
+    "numEmployees": 23
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2304.65,
+    "medianAnnual": 119841.75,
+    "numEmployees": 10
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2057.75,
+    "medianAnnual": 107003.21,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2480.94,
+    "medianAnnual": 129009.14,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1942.56,
+    "medianAnnual": 101013.12,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "critics and columnists",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 2436.35,
+    "medianAnnual": 126690.2,
+    "numEmployees": 7
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1772.8,
+    "medianAnnual": 92185.6,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1713.17,
+    "medianAnnual": 89084.84,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "designers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1882.66,
+    "medianAnnual": 97898.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1907.13,
+    "medianAnnual": 99170.81,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1970.3,
+    "medianAnnual": 102455.81,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1700.85,
+    "medianAnnual": 88443.94,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1616.91,
+    "medianAnnual": 84079.58,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1800.48,
+    "medianAnnual": 93624.96,
+    "numEmployees": 9
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1843.93,
+    "medianAnnual": 95884.36,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1745.85,
+    "medianAnnual": 90784.07,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1843.93,
+    "medianAnnual": 95884.36,
+    "numEmployees": 5
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1720.53,
+    "medianAnnual": 89467.3,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1843.93,
+    "medianAnnual": 95884.36,
+    "numEmployees": 5
+  },
+  {
+    "guild": "sfc",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1736.53,
+    "medianAnnual": 90299.82,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1839.12,
+    "medianAnnual": 95634.16,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1795.58,
+    "medianAnnual": 93370.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1900,
+    "medianAnnual": 98800,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1795.58,
+    "medianAnnual": 93370.16,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "data reporters and developers",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1900,
+    "medianAnnual": 98800,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfc",
+    "teams": "Meteorologists",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 2228.03,
+    "medianAnnual": 115857.56,
+    "numEmployees": 2
+  },
+  {
+    "guild": "sfc",
+    "teams": "copy editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1678.07,
+    "medianAnnual": 87259.64,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1576.36,
+    "medianAnnual": 81970.72,
+    "numEmployees": 30
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1624.28,
+    "medianAnnual": 84462.35,
+    "numEmployees": 11
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1569.41,
+    "medianAnnual": 81609.11,
+    "numEmployees": 19
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1602.03,
+    "medianAnnual": 83305.3,
+    "numEmployees": 13
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1569.58,
+    "medianAnnual": 81617.95,
+    "numEmployees": 17
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1920.58,
+    "medianAnnual": 99870.16,
+    "numEmployees": 9
+  },
+  {
+    "guild": "sfgate",
+    "teams": "all",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1569.41,
+    "medianAnnual": 81609.11,
+    "numEmployees": 21
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1410.97,
+    "medianAnnual": 73370.7,
+    "numEmployees": 10
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "men",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1515.52,
+    "medianAnnual": 78806.94,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "women and non-binary",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1313.28,
+    "medianAnnual": 68290.3,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "nonwhite",
+    "age": "all",
+    "medianWeek": 1461.46,
+    "medianAnnual": 75995.92,
+    "numEmployees": 3
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "white",
+    "age": "all",
+    "medianWeek": 1360.49,
+    "medianAnnual": 70745.48,
+    "numEmployees": 7
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "40+",
+    "medianWeek": 1824.14,
+    "medianAnnual": 94855.2,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfgate",
+    "teams": "part-time",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "under 40",
+    "medianWeek": 1410.97,
+    "medianAnnual": 73370.7,
+    "numEmployees": 6
+  },
+  {
+    "guild": "sfgate",
+    "teams": "reporters",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1580.99,
+    "medianAnnual": 82211.48,
+    "numEmployees": 8
+  },
+  {
+    "guild": "sfgate",
+    "teams": "editors",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1860.65,
+    "medianAnnual": 96753.8,
+    "numEmployees": 4
+  },
+  {
+    "guild": "sfgate",
+    "teams": "sports",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1597.38,
+    "medianAnnual": 83063.5,
+    "numEmployees": 1
+  },
+  {
+    "guild": "sfgate",
+    "teams": "digital",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1569.41,
+    "medianAnnual": 81609.11,
+    "numEmployees": 5
+  },
+  {
+    "guild": "sfgate",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1624.28,
+    "medianAnnual": 84462.35,
+    "numEmployees": 1
+  },
+  {
+    "guild": "sfgate",
+    "teams": "photographers",
+    "gender": "all",
+    "ethnicity": "all",
+    "age": "all",
+    "medianWeek": 1405.6,
+    "medianAnnual": 73091.2,
+    "numEmployees": 1
+  }
+]
