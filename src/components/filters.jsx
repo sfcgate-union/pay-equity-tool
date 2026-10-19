@@ -250,6 +250,25 @@ export default function Filters({ data }) {
           Using the filters below, you can explore the data and see how the pay
           equity gap varies by newsroom and by department or role.
         </p>
+        <label className="filtersSubhed" for="year">
+          Toggle by year
+        </label>
+        <div className="yearButtonsContainer">
+          <button
+            id="data2025"
+            className="yearButton"
+            onClick={(e) => setSelectedGuild(e.target.id)}
+          >
+            2025
+          </button>
+          <button
+            id="data2026"
+            className="yearButton"
+            onClick={(e) => setSelectedGuild(e.target.id)}
+          >
+            2026
+          </button>
+        </div>
         <label className="filtersSubhed" for="newsroom">
           Filter by newsroom
         </label>

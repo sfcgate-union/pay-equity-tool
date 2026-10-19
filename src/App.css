@@ -110,7 +110,12 @@ body {
 }
 
 .methodologyContainer ul {
-  list-style: inside;
+  /* list-style: inside; */
+  list-style-type: "-  ";
+}
+
+.methodologyContainer li {
+  padding-bottom: 1rem;
 }
 
 .deptResultsContainer {
@@ -130,19 +135,30 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.yearButtonsContainer,
 .newsroomButtonsContainer {
   cursor: pointer;
-  /* display: block; */
   border: none;
   border-radius: 5px;
-  background-color: C7C7C7;
   font-size: 12px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
 
+  margin-right: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.yearButton {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #c7c7c7;
+  align-items: right;
 }
 
 .newsButton {
@@ -156,6 +172,13 @@ body {
   background-color: #c7c7c7;
   align-items: right;
   margin-right: 0.5rem;
+}
+
+.yearButton:hover,
+.yearButton:focus,
+.yearButton:active {
+  color: #fff;
+  background-color: #909090;
 }
 
 .newsButton:hover,
