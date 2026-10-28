@@ -52,10 +52,10 @@ export default function Filters({ data = [] }) {
       secondValue: "white",
       summary: (nonwhite, white) => (
         <>
-          Non-white employees earn a median of $
+          Non-white employees earn a median salary of $
           {formatSalaries(nonwhite.medianAnnual)}
           {differenceFromNewsroom(nonwhite, newsroomRow)}, while white employees
-          earn a median of ${formatSalaries(white.medianAnnual)}
+          earn a median salary of ${formatSalaries(white.medianAnnual)}
           {differenceFromNewsroom(white, newsroomRow)}.
         </>
       ),
@@ -67,10 +67,10 @@ export default function Filters({ data = [] }) {
       secondValue: "men",
       summary: (womenAndNonbinary, men) => (
         <>
-          Female and nonbinary-identifying employees earn a median of $
+          Female and nonbinary-identifying employees earn a median salary of $
           {formatSalaries(womenAndNonbinary.medianAnnual)}
           {differenceFromNewsroom(womenAndNonbinary, newsroomRow)}, while
-          male-identifying employees earn a median of $
+          male-identifying employees earn a median salary of $
           {formatSalaries(men.medianAnnual)}
           {differenceFromNewsroom(men, newsroomRow)}.
         </>
@@ -83,10 +83,10 @@ export default function Filters({ data = [] }) {
       secondValue: "40+",
       summary: (under40, over40) => (
         <>
-          Employees <i>under 40 years old</i> earn a median of $
+          Employees <i>under 40 years old</i> earn a median salary of $
           {formatSalaries(under40.medianAnnual)}
-          {differenceFromNewsroom(under40, newsroomRow)}; employees{" "}
-          <i>40 years and older</i> earn a median of $
+          {differenceFromNewsroom(under40, newsroomRow)}, while employees{" "}
+          <i>40 years and older</i> earn a median salary of $
           {formatSalaries(over40.medianAnnual)}
           {differenceFromNewsroom(over40, newsroomRow)}.
         </>
@@ -244,7 +244,7 @@ export default function Filters({ data = [] }) {
 
         {overallRow && (
           <p className="deptComparison">
-            The department-wide median is{" "}
+            The department-wide median salary is{" "}
             <b>${formatSalaries(overallRow.medianAnnual)}</b> per year.
           </p>
         )}
