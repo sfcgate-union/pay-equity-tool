@@ -142,74 +142,89 @@ export default function Filters({ data = [] }) {
   return (
     <>
       <div className="filtersContainer">
-        <p className="instructions">
-          Using the filters below, you can explore the data and see how the pay
-          equity gap varies by newsroom and by department or role. If for
-          certain departments/teams you see demographic factors <b>missing</b>{" "}
-          (e.g. only the department-wide median shows up), there were{" "}
-          <b>
-            too few members or not enough data for that specific demographic
-            factor
-          </b>{" "}
-          in 2025.
-        </p>
-
-        <label className="filtersSubhed">Filter by newsroom</label>
-        <div className="newsroomButtonsContainer">
-          <button
-            type="button"
-            className="newsButton"
-            onClick={() => setSelectedGuild("sfc")}
-            aria-pressed={selectedGuild === "sfc"}
-          >
-            SF Chronicle
-          </button>
-          <button
-            type="button"
-            className="newsButton"
-            onClick={() => setSelectedGuild("sfgate")}
-            aria-pressed={selectedGuild === "sfgate"}
-          >
-            SFGATE
-          </button>
-          <button
-            type="button"
-            className="newsButton"
-            onClick={() => setSelectedGuild("all")}
-            aria-pressed={selectedGuild === "all"}
-          >
-            Guild-wide
-          </button>
+        <h2 className="filtersInstructionsSubhed">
+          How to filter and read the data
+        </h2>
+        <div className="instructions">
+          <p>
+            {" "}
+            Using the filters below, you can explore the data and see how the
+            pay equity gap varies by newsroom and by department or role.
+          </p>
+          <p>
+            Hover over or tab (keyboard-accessible) dots to see exact salary
+            data by demographic factor (ethnicity, gender, age).
+          </p>
+          <p>
+            If for certain departments/teams you see demographic factors{" "}
+            <b>missing</b> (e.g. only the department-wide median shows up),
+            there were{" "}
+            <b>
+              too few members or not enough data for that specific demographic
+              factor
+            </b>{" "}
+            in 2025.
+          </p>
         </div>
 
-        <label className="filtersSubhed" htmlFor="dept">
-          Filter by department or role
-        </label>
-        <div className="deptDropdownWrapper">
-          <select
-            id="dept"
-            name="dept"
-            className="deptDropdown"
-            value={selectedDept}
-            onChange={(event) => setSelectedDept(event.target.value)}
-          >
-            <option value="all">All departments</option>
-            <option value="reporters">Reporters</option>
-            <option value="digital">Digital</option>
-            <option value="critics and columnists">
-              Critics and columnists
-            </option>
-            <option value="data reporters and developers">
-              Data reporters and developers
-            </option>
-            <option value="designers">Designers</option>
-            <option value="metereologists">Meteorologists</option>
-            <option value="copy editors">Copy editors</option>
-            <option value="photographers">Photographers</option>
-            <option value="sports">Sports</option>
-            <option value="editors">Editors</option>
-            <option value="part-time">Part-time</option>
-          </select>
+        <div className="filtersSubContainer">
+          <label className="filtersSubhed">Filter by newsroom</label>
+          <div className="newsroomButtonsContainer">
+            <button
+              type="button"
+              className="newsButton"
+              onClick={() => setSelectedGuild("sfc")}
+              aria-pressed={selectedGuild === "sfc"}
+            >
+              SF Chronicle
+            </button>
+            <button
+              type="button"
+              className="newsButton"
+              onClick={() => setSelectedGuild("sfgate")}
+              aria-pressed={selectedGuild === "sfgate"}
+            >
+              SFGATE
+            </button>
+            <button
+              type="button"
+              className="newsButton"
+              onClick={() => setSelectedGuild("all")}
+              aria-pressed={selectedGuild === "all"}
+            >
+              Guild-wide
+            </button>
+          </div>
+
+          <label className="filtersSubhed" htmlFor="dept">
+            Filter by department or role
+          </label>
+          <div className="deptDropdownWrapper">
+            <select
+              id="dept"
+              name="dept"
+              className="deptDropdown"
+              value={selectedDept}
+              onChange={(event) => setSelectedDept(event.target.value)}
+            >
+              <option value="all">All departments</option>
+              <option value="reporters">Reporters</option>
+              <option value="digital">Digital</option>
+              <option value="critics and columnists">
+                Critics and columnists
+              </option>
+              <option value="data reporters and developers">
+                Data reporters and developers
+              </option>
+              <option value="designers">Designers</option>
+              <option value="metereologists">Meteorologists</option>
+              <option value="copy editors">Copy editors</option>
+              <option value="photographers">Photographers</option>
+              <option value="sports">Sports</option>
+              <option value="editors">Editors</option>
+              <option value="part-time">Part-time</option>
+            </select>
+          </div>
         </div>
       </div>
 

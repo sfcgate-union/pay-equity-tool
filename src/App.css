@@ -126,10 +126,15 @@ body {
 }
 
 .filtersSubhed,
-.methodologySubhed {
+.methodologySubhed,
+.filtersInstructionsSubhed {
   font-size: 1.25rem;
   font-weight: 500;
   margin-right: 1rem;
+}
+
+.filtersSubContainer {
+  padding-top: 1rem;
 }
 
 .methodologySubhed {
