@@ -35,30 +35,28 @@ export default function Introduction() {
         race through this data visualization tool created by our own Jenny Kwon.
       </p>
       <h2 className="methodologySubhed">Key findings from 2025</h2>
-      <p>
-        <ul>
-          <li>
-            The highest paid, most experienced people of color in the newsroom,
-            on median, still make less than the lowest paid, least experienced
-            white employees.
-          </li>
-          <li>
-            The median nonwhite worker makes $6,760 less per year than the
-            median white worker.
-          </li>
-          <li>
-            In general, the median pay for men is pretty close to the median pay
-            for women. But there are some significant disparities in some teams.
-            For example, the median male reporter makes $7,554 more a year than
-            the median female reporter.
-          </li>
-          <li>
-            Racial disparities are also notable among reporters — the median pay
-            for white reporters is $7,446 a year higher than the median for
-            nonwhite reporters.
-          </li>
-        </ul>
-      </p>
+      <ul>
+        <li>
+          The highest paid, most experienced people of color in the newsroom, on
+          median, still make less than the lowest paid, least experienced white
+          employees.
+        </li>
+        <li>
+          The median nonwhite worker makes $6,760 less per year than the median
+          white worker.
+        </li>
+        <li>
+          In general, the median pay for men is pretty close to the median pay
+          for women. But there are some significant disparities in some teams.
+          For example, the median male reporter makes $7,554 more a year than
+          the median female reporter.
+        </li>
+        <li>
+          Racial disparities are also notable among reporters — the median pay
+          for white reporters is $7,446 a year higher than the median for
+          nonwhite reporters.
+        </li>
+      </ul>
       <p>
         If you’d like to review the original findings – anonymized – in great
         detail, peruse our 26-page 2025 Pay Equity report prepared by our very

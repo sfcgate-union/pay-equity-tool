@@ -1,8 +1,14 @@
+//// DELETE? Un-optimized code
 // TO DO - it's not guild median unless the "newsroom" selected is the entire guild — change this wording
 // TO DO - remove "median" from legend
 
-import React, { useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { scaleLinear } from "d3";
+
+// // refs for the overall svgs for each demographic factor
+// const genderRef = useRef(null);
+// const ethnicityRef = useRef(null);
+// const ageRef = useRef(null);
 
 const margin = { top: 50, right: 25, bottom: 50, left: 10 };
 const tickLength = 8;
@@ -55,19 +61,33 @@ const over40X = 200;
 const under40X = 290;
 
 export default function BasicScale({
+  setDeptMedian,
   data,
   selectedGuild,
   selectedDept,
   factor,
 }) {
   let guildDot;
+  let deptMedian;
   let deptDot;
+  let whiteMedian;
   let whiteDot;
+  let nonWhiteMedian;
   let nonWhiteDot;
+  let over40Median;
   let over40Dot;
+  let under40Median;
   let under40Dot;
+  let wnbMedian;
   let wnbDot;
+  let maleMedian;
   let maleDot;
+
+  console.log({ data });
+
+  //// tooltip specific variables
+  const [tooltipActive, setTooltipActive] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   // not using these variables - delete?
   let maxMedian = Math.max(...data.map((l) => l.medianAnnual));
@@ -81,6 +101,18 @@ export default function BasicScale({
     .domain([70, maxShortened]) // changed this from 0 because the minimum salary is ~70k
     .range([0, boundsWidth]);
 
+  // tooltip functions
+  function openTooltip(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    setTooltipPosition({
+      x: rect.left + rect.width / 2,
+      y: rect.top - 15,
+    });
+
+    setTooltipActive(true);
+  }
+
   function drawChart() {
     // DEBUG: is there a way to make this not based on hardcoded numbers?
     if (selectedGuild == "sfc") {
@@ -93,6 +125,14 @@ export default function BasicScale({
     }
 
     // calculating dept-specific median
+    deptMedian = data
+      .filter(
+        (dept) => dept.guild == selectedGuild && dept.teams == selectedDept,
+      )
+      .map((dept) => dept.medianAnnual)[0];
+
+    // setDeptMedian(deptMedian);
+
     deptDot = xScale(
       Math.round(
         data
@@ -106,6 +146,14 @@ export default function BasicScale({
     // for different demographic factors
     if (factor == "gender") {
       // for women and nonbinary
+      wnbMedian = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.gender == "women and nonbinary",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       wnbDot = xScale(
         Math.round(
           data
@@ -119,6 +167,14 @@ export default function BasicScale({
         ),
       );
       // for men
+      maleMedian = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.gender == "men",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       maleDot = xScale(
         Math.round(
           data
@@ -133,6 +189,14 @@ export default function BasicScale({
       );
     } else if (factor == "age") {
       // for 40+
+      over40Median = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.age == "40+",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       over40Dot = xScale(
         Math.round(
           data
@@ -146,6 +210,14 @@ export default function BasicScale({
         ),
       );
       // for under 40
+      under40Median = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.age == "under 40",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       under40Dot = xScale(
         Math.round(
           data
@@ -159,6 +231,14 @@ export default function BasicScale({
         ),
       );
     } else if (factor == "ethnicity") {
+      nonWhiteMedian = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.ethnicity == "nonwhite",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       nonWhiteDot = xScale(
         Math.round(
           data
@@ -171,6 +251,14 @@ export default function BasicScale({
             .map((dept) => dept.medianAnnual)[0] / 1000,
         ),
       );
+      whiteMedian = data
+        .filter(
+          (dept) =>
+            dept.guild == selectedGuild &&
+            dept.teams == selectedDept &&
+            dept.ethnicity == "white",
+        )
+        .map((dept) => dept.medianAnnual)[0];
       whiteDot = xScale(
         Math.round(
           data
@@ -195,457 +283,483 @@ export default function BasicScale({
   // DEBUG: optimize this to be more efficient
   return (
     <>
-      {factor === "gender" && (
-        <svg width={width} height={height}>
-          {/* START Legend */}
+      <div className="scaleContainer">
+        {factor === "gender" && (
+          <>
+            <svg width={width} height={height}>
+              {/* START Legend */}
 
-          {/* newsroom/guild median dot */}
-          <circle
-            cx={String(newsroomX)}
-            cy="10"
-            opacity={newsroomOpacity}
-            stroke="#000"
-            stroke-width="0"
-            r={String(newsroomRadius)}
-            fill={guildColor}
-          />
-          <text
-            fill={guildColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(newsroomX + 10)}
-            y="14"
-          >
-            Newsroom
-          </text>
+              {/* newsroom/guild median dot */}
+              <circle
+                className="dot"
+                cx={String(newsroomX)}
+                cy="10"
+                opacity={newsroomOpacity}
+                stroke="#000"
+                strokeWidth="0"
+                r={String(newsroomRadius)}
+                fill={guildColor}
+              />
+              <text
+                fill={guildColorDark}
+                fontSize="12px"
+                textAnchor="start"
+                x={String(newsroomX + 10)}
+                y="14"
+              >
+                Newsroom
+              </text>
 
-          {/* dept. median dot */}
-          <circle
-            cx={String(deptX)}
-            cy="10"
-            opacity=".5"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(deptRadius)}
-            fill={deptColor}
-          />
-          <text
-            fill={deptColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(deptX + 10)}
-            y="14"
-          >
-            Department
-          </text>
+              {/* dept. median dot */}
+              <circle
+                cx={String(deptX)}
+                cy="10"
+                opacity=".5"
+                stroke="#000"
+                strokeWidth=".5"
+                r={String(deptRadius)}
+                fill={deptColor}
+              />
+              <text
+                fill={deptColorDark}
+                fontSize="12px"
+                textAnchor="start"
+                x={String(deptX + 10)}
+                y="14"
+              >
+                Department
+              </text>
 
-          {/* women & nb dot */}
-          <circle
-            cx={String(wnbX)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={wnbColor}
-          />
-          <text
-            fill={wnbColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(wnbX + 15)}
-            y="14"
-          >
-            Women and nonbinary
-          </text>
+              {/* women & nb dot */}
+              <circle
+                cx={String(wnbX)}
+                cy="10"
+                stroke="#000"
+                strokeWidth=".5"
+                r={String(demoRadius)}
+                fill={wnbColor}
+              />
+              <text
+                fill={wnbColorDark}
+                fontSize="12px"
+                textAnchor="start"
+                x={String(wnbX + 15)}
+                y="14"
+              >
+                Women and nonbinary
+              </text>
 
-          {/* men dot */}
-          <circle
-            cx={String(maleX)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={maleColor}
-          />
-          <text
-            fill={maleColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(maleX + 15)}
-            y="14"
-          >
-            Men
-          </text>
-          {/* END Legend */}
+              {/* men dot */}
+              <circle
+                cx={String(maleX)}
+                cy="10"
+                stroke="#000"
+                strokeWidth=".5"
+                r={String(demoRadius)}
+                fill={maleColor}
+              />
+              <text
+                fill={maleColorDark}
+                fontSize="12px"
+                textAnchor="start"
+                x={String(maleX + 15)}
+                y="14"
+              >
+                Men
+              </text>
+              {/* END Legend */}
 
-          <g transform={`translate(${margin.left}, ${margin.top})`}>
-            {/* Main horizontal line */}
-            <line
-              x1={0}
-              x2={boundsWidth}
-              y1={0}
-              y2={0}
-              stroke="black"
-              strokeWidth={0.5}
-            />
+              <g transform={`translate(${margin.left}, ${margin.top})`}>
+                {/* Main horizontal line */}
+                <line
+                  x1={0}
+                  x2={boundsWidth}
+                  y1={0}
+                  y2={0}
+                  stroke="black"
+                  strokeWidth={0.5}
+                />
 
-            {/* Ticks and Labels */}
-            {xScale.ticks(10).map((value) => (
-              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
-                <line y2={tickLength} stroke="currentColor" />
-                <text
-                  style={{
-                    fontSize: "14px",
-                    textAnchor: "middle",
-                    transform: "translateY(25px)",
-                  }}
-                >
-                  {value + "K"}
-                </text>
+                {/* Ticks and Labels */}
+                {xScale.ticks(10).map((value) => (
+                  <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                    <line y2={tickLength} stroke="currentColor" />
+                    <text
+                      style={{
+                        fontSize: "14px",
+                        textAnchor: "middle",
+                        transform: "translateY(25px)",
+                      }}
+                    >
+                      {value + "K"}
+                    </text>
+                  </g>
+                ))}
+
+                {/* *** Dots on the scale *** */}
+                {/* newsroom median */}
+                <circle
+                  cx={guildDot}
+                  opacity={String(newsroomOpacity)}
+                  stroke="#000"
+                  strokeWidth="0"
+                  cy="0"
+                  r={String(newsroomRadius)}
+                  fill={guildColor}
+                />
+                {/* dept median */}
+                <circle
+                  cx={deptDot}
+                  opacity=".5"
+                  stroke="#000"
+                  strokeWidth=".5"
+                  cy="0"
+                  r={String(deptRadius)}
+                  fill={deptColor}
+                />
+                <circle
+                  cx={wnbDot}
+                  stroke="#000"
+                  strokeWidth=".5"
+                  cy="0"
+                  r={String(demoRadius)}
+                  fill={wnbColor}
+                />
+                <circle
+                  cx={maleDot}
+                  stroke="#000"
+                  strokeWidth=".5"
+                  cy="0"
+                  r={String(demoRadius)}
+                  fill={maleColor}
+                />
               </g>
-            ))}
+            </svg>
+          </>
+        )}
 
-            {/* *** Dots on the scale *** */}
-            {/* newsroom median */}
+        {factor === "age" && (
+          <svg width={width} height={height}>
+            {/* START Legend */}
+
+            {/* newsroom/guild median dot */}
             <circle
-              cx={guildDot}
-              opacity={String(newsroomOpacity)}
+              cx={String(newsroomX)}
+              cy="10"
+              opacity={newsroomOpacity}
               stroke="#000"
-              stroke-width="0"
-              cy="0"
+              strokeWidth="0"
               r={String(newsroomRadius)}
               fill={guildColor}
             />
-            {/* dept median */}
+            <text
+              fill={guildColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(newsroomX + 10)}
+              y="14"
+            >
+              Newsroom
+            </text>
+
+            {/* dept. median */}
             <circle
-              cx={deptDot}
+              cx={String(deptX)}
+              cy="10"
               opacity=".5"
               stroke="#000"
-              stroke-width=".5"
-              cy="0"
+              strokeWidth=".5"
               r={String(deptRadius)}
               fill={deptColor}
             />
+            <text
+              fill={deptColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(deptX + 10)}
+              y="14"
+            >
+              Department
+            </text>
+
+            {/* under 40 */}
             <circle
-              cx={wnbDot}
+              cx={String(under40X)}
+              cy="10"
               stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r={String(demoRadius)}
-              fill={wnbColor}
-            />
-            <circle
-              cx={maleDot}
-              stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r={String(demoRadius)}
-              fill={maleColor}
-            />
-          </g>
-        </svg>
-      )}
-
-      {factor === "age" && (
-        <svg width={width} height={height}>
-          {/* START Legend */}
-
-          {/* newsroom/guild median dot */}
-          <circle
-            cx={String(newsroomX)}
-            cy="10"
-            opacity={newsroomOpacity}
-            stroke="#000"
-            stroke-width="0"
-            r={String(newsroomRadius)}
-            fill={guildColor}
-          />
-          <text
-            fill={guildColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(newsroomX + 10)}
-            y="14"
-          >
-            Newsroom
-          </text>
-
-          {/* dept. median */}
-          <circle
-            cx={String(deptX)}
-            cy="10"
-            opacity=".5"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(deptRadius)}
-            fill={deptColor}
-          />
-          <text
-            fill={deptColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(deptX + 10)}
-            y="14"
-          >
-            Department
-          </text>
-
-          {/* under 40 */}
-          <circle
-            cx={String(under40X)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={under40Color}
-          />
-          <text
-            fill={under40ColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(under40X + 15)}
-            y="14"
-          >
-            Under 40 years old
-          </text>
-
-          {/* 40 and up*/}
-          <circle
-            cx={String(over40X)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={over40Color}
-          />
-          <text
-            fill={over40ColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(over40X + 15)}
-            y="14"
-          >
-            40+ years
-          </text>
-          {/* END Legend */}
-
-          <g transform={`translate(${margin.left}, ${margin.top})`}>
-            {/* Main horizontal line */}
-            <line
-              x1={0}
-              x2={boundsWidth}
-              y1={0}
-              y2={0}
-              stroke="black"
-              strokeWidth={0.5}
-            />
-
-            {/* Ticks and Labels */}
-            {xScale.ticks(10).map((value) => (
-              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
-                <line y2={tickLength} stroke="currentColor" />
-                <text
-                  style={{
-                    fontSize: "14px",
-                    textAnchor: "middle",
-                    transform: "translateY(25px)",
-                  }}
-                >
-                  {value + "K"}
-                </text>
-              </g>
-            ))}
-
-            {/* *** Dots on the scale *** */}
-            {/* newsroom median */}
-            <circle
-              cx={guildDot}
-              opacity=".5"
-              stroke="#000"
-              stroke-width="0"
-              cy="0"
-              r={String(newsroomRadius)}
-              fill={guildColor}
-            />
-            {/* dept median */}
-            <circle
-              cx={deptDot}
-              opacity=".5"
-              stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r={String(deptRadius)}
-              fill={deptColor}
-            />
-            <circle
-              cx={over40Dot}
-              stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r={String(demoRadius)}
-              fill={over40Color}
-            />
-            <circle
-              cx={under40Dot}
-              stroke="#000"
-              stroke-width=".5"
-              cy="0"
+              strokeWidth=".5"
               r={String(demoRadius)}
               fill={under40Color}
             />
-          </g>
-        </svg>
-      )}
+            <text
+              fill={under40ColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(under40X + 15)}
+              y="14"
+            >
+              Under 40 years old
+            </text>
 
-      {factor === "ethnicity" && (
-        <svg width={width} height={height}>
-          {/* START Legend */}
-
-          {/* guild median */}
-          <circle
-            cx={String(newsroomX)}
-            cy="10"
-            opacity=".5"
-            stroke="#000"
-            stroke-width="0"
-            r="4"
-            fill={guildColor}
-          />
-          <text
-            fontSize="12px"
-            text-anchor="start"
-            x={String(newsroomX + 10)}
-            y="14"
-          >
-            Newsroom
-          </text>
-
-          {/* dept. median */}
-          <circle
-            cx={String(deptX)}
-            cy="10"
-            opacity=".5"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(deptRadius)}
-            fill={deptColor}
-          />
-          <text
-            fill={deptColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(deptX + 10)}
-            y="14"
-          >
-            Department
-          </text>
-
-          {/* white median */}
-          <circle
-            cx={String(whiteX)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={whiteColor}
-          />
-          <text
-            fill={whiteColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(whiteX + 15)}
-            y="14"
-          >
-            White
-          </text>
-
-          {/* nonwhite median */}
-          <circle
-            cx={String(nonWhiteX)}
-            cy="10"
-            stroke="#000"
-            stroke-width=".5"
-            r={String(demoRadius)}
-            fill={nonWhiteColor}
-          />
-          <text
-            fill={nonWhiteColorDark}
-            fontSize="12px"
-            text-anchor="start"
-            x={String(nonWhiteX + 15)}
-            y="14"
-          >
-            Non-white
-          </text>
-          {/* END Legend */}
-
-          <g transform={`translate(${margin.left}, ${margin.top})`}>
-            {/* Main horizontal line */}
-            <line
-              x1={0}
-              x2={boundsWidth}
-              y1={0}
-              y2={0}
-              stroke="black"
-              strokeWidth={0.5}
-            />
-
-            {/* Ticks and Labels */}
-            {xScale.ticks(10).map((value) => (
-              <g key={value} transform={`translate(${xScale(value)}, 0)`}>
-                <line y2={tickLength} stroke="currentColor" />
-                <text
-                  style={{
-                    fontSize: "14px",
-                    textAnchor: "middle",
-                    transform: "translateY(25px)",
-                  }}
-                >
-                  {value + "K"}
-                </text>
-              </g>
-            ))}
-
-            {/* *** Dots on the scale *** */}
-            {/* newsroom median */}
+            {/* 40 and up*/}
             <circle
-              cx={guildDot}
+              cx={String(over40X)}
+              cy="10"
+              stroke="#000"
+              strokeWidth=".5"
+              r={String(demoRadius)}
+              fill={over40Color}
+            />
+            <text
+              fill={over40ColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(over40X + 15)}
+              y="14"
+            >
+              40+ years
+            </text>
+            {/* END Legend */}
+
+            <g transform={`translate(${margin.left}, ${margin.top})`}>
+              {/* Main horizontal line */}
+              <line
+                x1={0}
+                x2={boundsWidth}
+                y1={0}
+                y2={0}
+                stroke="black"
+                strokeWidth={0.5}
+              />
+
+              {/* Ticks and Labels */}
+              {xScale.ticks(10).map((value) => (
+                <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                  <line y2={tickLength} stroke="currentColor" />
+                  <text
+                    style={{
+                      fontSize: "14px",
+                      textAnchor: "middle",
+                      transform: "translateY(25px)",
+                    }}
+                  >
+                    {value + "K"}
+                  </text>
+                </g>
+              ))}
+
+              {/* *** Dots on the scale *** */}
+              {/* newsroom median */}
+              <circle
+                cx={guildDot}
+                opacity=".5"
+                stroke="#000"
+                strokeWidth="0"
+                cy="0"
+                r={String(newsroomRadius)}
+                fill={guildColor}
+                onMouseEnter={openTooltip}
+                onFocus={openTooltip}
+                onMouseLeave={() => setTooltipActive(false)}
+              />
+              {/* dept median */}
+              <circle
+                cx={deptDot}
+                opacity=".5"
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r={String(deptRadius)}
+                fill={deptColor}
+              />
+              <circle
+                cx={over40Dot}
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r={String(demoRadius)}
+                fill={over40Color}
+                onMouseEnter={openTooltip}
+                onFocus={openTooltip}
+                onMouseLeave={() => setTooltipActive(false)}
+              />
+              <circle
+                cx={under40Dot}
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r={String(demoRadius)}
+                fill={under40Color}
+                onMouseEnter={openTooltip}
+                onFocus={openTooltip}
+                onMouseLeave={() => setTooltipActive(false)}
+              />
+            </g>
+          </svg>
+        )}
+
+        {factor === "ethnicity" && (
+          <svg width={width} height={height}>
+            {/* START Legend */}
+
+            {/* guild median */}
+            <circle
+              cx={String(newsroomX)}
+              cy="10"
               opacity=".5"
               stroke="#000"
-              stroke-width="0"
-              cy="0"
-              r="3.5"
+              strokeWidth="0"
+              r="4"
               fill={guildColor}
             />
-            {/* dept median */}
+            <text
+              fontSize="12px"
+              textAnchor="start"
+              x={String(newsroomX + 10)}
+              y="14"
+            >
+              Newsroom
+            </text>
+
+            {/* dept. median */}
             <circle
-              cx={deptDot}
+              cx={String(deptX)}
+              cy="10"
               opacity=".5"
               stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r="5"
+              strokeWidth=".5"
+              r={String(deptRadius)}
               fill={deptColor}
             />
+            <text
+              fill={deptColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(deptX + 10)}
+              y="14"
+            >
+              Department
+            </text>
+
+            {/* white median */}
             <circle
-              cx={whiteDot}
+              cx={String(whiteX)}
+              cy="10"
               stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r="7.5"
+              strokeWidth=".5"
+              r={String(demoRadius)}
               fill={whiteColor}
             />
+            <text
+              fill={whiteColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(whiteX + 15)}
+              y="14"
+            >
+              White
+            </text>
+
+            {/* nonwhite median */}
             <circle
-              cx={nonWhiteDot}
+              cx={String(nonWhiteX)}
+              cy="10"
               stroke="#000"
-              stroke-width=".5"
-              cy="0"
-              r="7.5"
+              strokeWidth=".5"
+              r={String(demoRadius)}
               fill={nonWhiteColor}
             />
-          </g>
-        </svg>
-      )}
+            <text
+              fill={nonWhiteColorDark}
+              fontSize="12px"
+              textAnchor="start"
+              x={String(nonWhiteX + 15)}
+              y="14"
+            >
+              Non-white
+            </text>
+            {/* END Legend */}
+
+            <g transform={`translate(${margin.left}, ${margin.top})`}>
+              {/* Main horizontal line */}
+              <line
+                x1={0}
+                x2={boundsWidth}
+                y1={0}
+                y2={0}
+                stroke="black"
+                strokeWidth={0.5}
+              />
+
+              {/* Ticks and Labels */}
+              {xScale.ticks(10).map((value) => (
+                <g key={value} transform={`translate(${xScale(value)}, 0)`}>
+                  <line y2={tickLength} stroke="currentColor" />
+                  <text
+                    style={{
+                      fontSize: "14px",
+                      textAnchor: "middle",
+                      transform: "translateY(25px)",
+                    }}
+                  >
+                    {value + "K"}
+                  </text>
+                </g>
+              ))}
+
+              {/* *** Dots on the scale *** */}
+              {/* newsroom median */}
+              <circle
+                cx={guildDot}
+                opacity=".5"
+                stroke="#000"
+                strokeWidth="0"
+                cy="0"
+                r="3.5"
+                fill={guildColor}
+              />
+              {/* dept median */}
+              <circle
+                cx={deptDot}
+                opacity=".5"
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r="5"
+                fill={deptColor}
+              />
+              <circle
+                cx={whiteDot}
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r="7.5"
+                fill={whiteColor}
+              />
+              <circle
+                cx={nonWhiteDot}
+                stroke="#000"
+                strokeWidth=".5"
+                cy="0"
+                r="7.5"
+                fill={nonWhiteColor}
+              />
+            </g>
+          </svg>
+        )}
+        {tooltipActive && (
+          <div
+            role="tooltip"
+            className="tooltipContainer"
+            style={{
+              left: tooltipPosition.x,
+              top: tooltipPosition.y,
+            }}
+          >
+            <p>{deptMedian}</p>
+          </div>
+        )}
+      </div>
     </>
   );
 }

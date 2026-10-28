@@ -265,3 +265,38 @@ body {
 .higher {
   color: #189196;
 }
+
+/* scale + tooltip styling */
+
+.scaleSvg {
+  overflow: visible;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tooltipContainer {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.point:hover .tooltipContainer,
+.point:focus .tooltipContainer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltipContainer rect {
+  fill: #fff;
+}
+
+.tooltipContainer text {
+  fill: #000;
+  font-size: 12px;
+}
+
+.point:focus-visible .pointVisible {
+  stroke: #111;
+  stroke-width: 2;
+}

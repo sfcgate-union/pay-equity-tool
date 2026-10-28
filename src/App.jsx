@@ -1,6 +1,6 @@
 import React from "react";
 import Introduction from "./components/introduction.jsx";
-import Filters from "./components/filters.jsx";
+import Filters from "./components/filtersOptimized.jsx";
 import "./App.css";
 import allGuildData from "./allguild.json";
 

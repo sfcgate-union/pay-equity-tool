@@ -1,3 +1,5 @@
+//// DELETE? Un-optimized code
+
 import React, { useState } from "react";
 import {
   capitalizeFirstLetter,
@@ -12,12 +14,18 @@ export default function Filters({ data }) {
   /* set "all" as default for both guild and dept? */
   const [selectedGuild, setSelectedGuild] = useState("all");
   const [selectedDept, setSelectedDept] = useState("all");
+  const [selectedDeptMedian, setSelectedDeptMedian] = useState(0);
 
   /* set newsroom medians as variables (for now) */
   let sfgateMedianAnnual = 80644;
   let sfgateMedianWeek = 1550;
   let sfcMedianAnnual = 93786;
   let sfcMedianWeek = 1804;
+
+  /* change dept median based on selection */
+  function changeDeptMedian(val) {
+    setSelectedDeptMedian(val);
+  }
 
   console.log({ selectedGuild, selectedDept });
 
@@ -43,6 +51,7 @@ export default function Filters({ data }) {
                   .
                 </p>
                 <BasicScale
+                  deptMedian={changeDeptMedian}
                   data={filteredData}
                   selectedGuild={selectedGuild}
                   selectedDept={selectedDept}
@@ -195,6 +204,7 @@ export default function Filters({ data }) {
                   .
                 </p>
                 <BasicScale
+                  setDeptMedian={changeDeptMedian}
                   data={filteredData}
                   selectedGuild={selectedGuild}
                   selectedDept={selectedDept}
@@ -224,6 +234,7 @@ export default function Filters({ data }) {
                   .
                 </p>
                 <BasicScale
+                  deptMedian={changeDeptMedian}
                   data={filteredData}
                   selectedGuild={selectedGuild}
                   selectedDept={selectedDept}
@@ -250,7 +261,7 @@ export default function Filters({ data }) {
           Using the filters below, you can explore the data and see how the pay
           equity gap varies by newsroom and by department or role.
         </p>
-        <label className="filtersSubhed" for="year">
+        {/* <label className="filtersSubhed" htmlFor="year">
           Toggle by year
         </label>
         <div className="yearButtonsContainer">
@@ -268,8 +279,8 @@ export default function Filters({ data }) {
           >
             2026
           </button>
-        </div>
-        <label className="filtersSubhed" for="newsroom">
+        </div> */}
+        <label className="filtersSubhed" htmlFor="newsroom">
           Filter by newsroom
         </label>
         <div className="newsroomButtonsContainer">
@@ -295,7 +306,7 @@ export default function Filters({ data }) {
             Guild-wide
           </button>
         </div>
-        <label className="filtersSubhed" for="dept">
+        <label className="filtersSubhed" htmlFor="dept">
           Filter by department or role
         </label>
         <div className="deptDropdownWrapper">
@@ -322,12 +333,12 @@ export default function Filters({ data }) {
             <option value="part-time">Part-time</option>
           </select>
         </div>
-        <p class="resultsInstructions">
+        {/* <p className="resultsInstructions">
           Example results from filtering salary data
           <br />
           <br />
           Insert static D3 scale with dots (guild-wide data?)
-        </p>
+        </p> */}
       </div>
       <div className="deptResultsContainer">
         <h2 className="deptSubHed">
@@ -343,7 +354,7 @@ export default function Filters({ data }) {
         </h2>
 
         <p className="deptComparison">
-          Put here the overall department median.
+          The overall department median is {selectedDeptMedian}.
         </p>
 
         {demographicComparison({
