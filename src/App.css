@@ -309,6 +309,12 @@ span.newsroomButton {
   opacity: 1;
 }
 
+.pointVisible:hover,
+.pointVisible:focus {
+  stroke-width: 1.5;
+  stroke-color: #000;
+}
+
 .tooltipContent {
   box-sizing: border-box;
   width: fit-content;

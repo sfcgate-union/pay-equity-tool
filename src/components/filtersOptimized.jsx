@@ -244,7 +244,7 @@ export default function Filters({ data = [] }) {
 
         {overallRow && (
           <p className="deptComparison">
-            The overall median is{" "}
+            The department-wide median is{" "}
             <b>${formatSalaries(overallRow.medianAnnual)}</b> per year.
           </p>
         )}
