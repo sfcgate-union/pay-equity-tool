@@ -156,6 +156,15 @@ export default function Filters({ data = [] }) {
             data by demographic factor (ethnicity, gender, age).
           </p>
           <p>
+            In this case, <i>newsroom median</i> means the median salary of the
+            data filtered by <i>newsroom</i> — so if the data is filtered to
+            only show <span className="newsroomButton">SFGate</span>, the
+            newsroom median would be the <i>SFGate</i> overall median. But if
+            the filter is set to{" "}
+            <span className="newsroomButton">Guild-wide</span>, the newsroom
+            median is actually the <i>guild-wide</i> median.
+          </p>
+          <p>
             If for certain departments/teams you see demographic factors{" "}
             <b>missing</b> (e.g. only the department-wide median shows up) or
             even "Insufficient data", there were{" "}

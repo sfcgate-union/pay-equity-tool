@@ -180,6 +180,18 @@ body {
   margin-right: 0.5rem;
 }
 
+span.newsroomButton {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #3e3e3e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2.5px;
+  background-color: #c7c7c7;
+  align-items: right;
+  margin-right: 0.5rem;
+}
+
 .yearButton:hover,
 .yearButton:focus,
 .yearButton:active {
