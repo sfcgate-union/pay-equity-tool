@@ -158,7 +158,7 @@ export default function Filters({ data = [] }) {
           <p>
             In this case, <i>newsroom median</i> means the median salary of the
             data filtered by <i>newsroom</i> — so if the data is filtered to
-            only show <span className="newsroomButton">SFGate</span>, the
+            only show <span className="newsroomButton">SFGATE</span>, the
             newsroom median would be the <i>SFGate</i> overall median. But if
             the filter is set to{" "}
             <span className="newsroomButton">Guild-wide</span>, the newsroom
