@@ -127,7 +127,7 @@ export function BasicScale({ data = [], factor }) {
   if (!points.length) {
     return (
       <div className="scaleContainer">
-        <p>No data available.</p>
+        <p>Insufficient data.</p>
       </div>
     );
   }

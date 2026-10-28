@@ -157,8 +157,8 @@ export default function Filters({ data = [] }) {
           </p>
           <p>
             If for certain departments/teams you see demographic factors{" "}
-            <b>missing</b> (e.g. only the department-wide median shows up),
-            there were{" "}
+            <b>missing</b> (e.g. only the department-wide median shows up) or
+            even "Insufficient data", there were{" "}
             <b>
               too few members or not enough data for that specific demographic
               factor
