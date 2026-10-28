@@ -52,6 +52,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: fff;
+  line-height: 1.33;
 
   /* libre franklin styling */
   /* font-family: "Libre Franklin", sans-serif;
@@ -276,8 +277,12 @@ body {
 }
 
 .tooltipContainer {
+  --tooltip-offset-x: 0px;
+  --tooltip-offset-y: -30px;
+
   visibility: hidden;
   opacity: 0;
+  transform: translate(var(--tooltip-offset-x), var(--tooltip-offset-y));
   transition: opacity 120ms ease;
 }
 
@@ -287,16 +292,20 @@ body {
   opacity: 1;
 }
 
-.tooltipContainer rect {
-  fill: #fff;
-}
-
-.tooltipContainer text {
-  fill: #000;
-  font-size: 12px;
-}
-
-.point:focus-visible .pointVisible {
-  stroke: #111;
-  stroke-width: 2;
+.tooltipContent {
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 150px;
+  margin-inline: auto;
+  padding: 6px 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  font:
+    12px "Fira Sans",
+    sans-serif;
+  text-align: center;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
 }

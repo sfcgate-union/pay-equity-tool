@@ -144,7 +144,14 @@ export default function Filters({ data = [] }) {
       <div className="filtersContainer">
         <p className="instructions">
           Using the filters below, you can explore the data and see how the pay
-          equity gap varies by newsroom and by department or role.
+          equity gap varies by newsroom and by department or role. If for
+          certain departments/teams you see demographic factors <b>missing</b>{" "}
+          (e.g. only the department-wide median shows up), there were{" "}
+          <b>
+            too few members or not enough data for that specific demographic
+            factor
+          </b>{" "}
+          in 2025.
         </p>
 
         <label className="filtersSubhed">Filter by newsroom</label>

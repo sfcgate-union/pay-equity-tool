@@ -1,5 +1,5 @@
 import React from "react";
-import { scaleLinear } from "d3";
+import { scaleLinear, extent } from "d3";
 
 const width = 670;
 const height = 100;
@@ -24,27 +24,27 @@ const groups = {
   age: [
     {
       value: "all",
-      label: "All employees",
+      label: "Department-wide",
       legendX: 10,
       ...colorData.all,
     },
     {
       value: "under 40",
       label: "Under 40 years old",
-      legendX: 160,
+      legendX: 150,
       ...colorData.ageUnder40,
     },
     {
       value: "40+",
       label: "40+ years",
-      legendX: 400,
+      legendX: 300,
       ...colorData.age40Plus,
     },
   ],
   gender: [
     {
       value: "all",
-      label: "All employees",
+      label: "Department-wide",
       legendX: 10,
       ...colorData.all,
     },
@@ -57,27 +57,27 @@ const groups = {
     {
       value: "men",
       label: "Men",
-      legendX: 400,
+      legendX: 320,
       ...colorData.genderMen,
     },
   ],
   ethnicity: [
     {
       value: "all",
-      label: "All employees",
+      label: "Department-wide",
       legendX: 10,
       ...colorData.all,
     },
     {
       value: "white",
       label: "White",
-      legendX: 160,
+      legendX: 150,
       ...colorData.ethnicityWhite,
     },
     {
       value: "nonwhite",
       label: "Non-white",
-      legendX: 300,
+      legendX: 230,
       ...colorData.ethnicityNonwhite,
     },
   ],
@@ -135,13 +135,25 @@ export function BasicScale({ data = [], factor }) {
   const values = points.map(({ row }) =>
     Math.round(Number(row.medianAnnual) / 1000),
   );
+
+  // change min and max values to be a range based on the department-wide median (-10 and +10)
+
+  //// to do: have range automatically adjust between +10/-10 and +15/-15 based on if a value falls outside the initial smaller range
+  let adjustedMin = Math.round(points[0].row.medianAnnual / 1000 - 15);
+  let adjustedMax = Math.round(points[0].row.medianAnnual / 1000 + 15);
+  let adjustedDomain = [adjustedMin, adjustedMax];
+
+  //// original min max values for xScale — remove if not using
   const minValue = Math.min(...values);
   const maxValue = Math.max(...values);
   const domain =
     minValue === maxValue ? [minValue - 1, maxValue + 1] : [minValue, maxValue];
 
   const boundsWidth = width - margin.left - margin.right;
-  const xScale = scaleLinear().domain(domain).nice().range([0, boundsWidth]);
+  const xScale = scaleLinear()
+    .domain(adjustedDomain)
+    .nice()
+    .range([0, boundsWidth]);
 
   return (
     <div className="scaleContainer">
@@ -233,16 +245,15 @@ export function BasicScale({ data = [], factor }) {
                   pointerEvents="none"
                 />
 
-                <g
-                  id={tooltipId}
-                  className="tooltipContainer"
-                  role="tooltip"
-                  transform={`translate(${boundsWidth / 2} + x, -10)`}
-                >
-                  <rect x="-180" y="-15" width="360" height="30" rx="4" />
-                  <text x="0" y="4" textAnchor="middle">
-                    {tooltip}
-                  </text>
+                <g id={tooltipId} className="tooltipContainer" role="tooltip">
+                  <foreignObject x="-120" y="-40" width="240" height="100">
+                    <div
+                      xmlns="http://www.w3.org/1999/xhtml"
+                      className="tooltipContent"
+                    >
+                      {tooltip}
+                    </div>
+                  </foreignObject>
                 </g>
               </g>
             );

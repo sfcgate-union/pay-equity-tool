@@ -102,7 +102,9 @@ export default function Introduction() {
         Your Pay Equity Task Force <br />
       </p>
       <p>
-        on behalf of the guild stewards <br />
+        <i>
+          on behalf of the guild stewards <br />
+        </i>
       </p>
 
       <p>
