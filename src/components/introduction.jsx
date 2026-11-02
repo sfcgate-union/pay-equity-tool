@@ -69,8 +69,8 @@ export default function Introduction() {
         <a href="https://postguild.org/2022-pay-study-explore-data/">
           their 2022 pay equity report
         </a>{" "}
-        that inspired ours, and to Nanette for collecting, analyzing and putting
-        together pay equity reports for the past several years.
+        that inspired ours, and to Nanette Asimov for collecting, analyzing and
+        putting together pay equity reports for the past several years.
       </p>
       <h2 className="methodologySubhed">FAQs</h2>
       <p>
